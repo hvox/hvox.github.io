@@ -1,12 +1,10 @@
 @media (prefers-color-scheme: dark) {
-  html { background:  #333; color: white; }
-  html { background:  #1a1b26; color: white; }
-  /* canvas { border: 0.2rem solid #c4c8da; } */
+  html { background:  #151621; color: white; }
 }
 
 @media (prefers-color-scheme: light) {
   html { background:  white; color: #333; }
-  canvas { border: medium solid #333; }
+  canvas { border: 0.2rem solid #151621; }
 }
 
 body {
