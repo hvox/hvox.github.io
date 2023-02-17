@@ -13,7 +13,11 @@ function merge(u, v, alpha) {
 window.onload = function() {
 	let CANVAS_SIZE = 360;
 	let GRID_SIZE = 15;
-	let ARROW_KEYS = {37: {x: -1}, 38: {y: -1}, 39: {x: 1}, 40: {y: 1}};
+	let ARROW_KEYS = {
+		"ArrowUp": {y: -1}, "ArrowLeft": {x: -1}, "ArrowDown": {y: 1}, "ArrowRight": {x: 1},
+		"KeyW": {y: -1}, "KeyA": {x: -1}, "KeyS": {y: +1}, "KeyD": {x: +1},
+		"KeyI": {y: -1}, "KeyJ": {x: -1}, "KeyK": {y: +1}, "KeyL": {x: +1},
+	};
 	let DEFAULT_SNAKE_SIZE = 4;
 
     let cvs = document.getElementById("canvas");
@@ -35,7 +39,7 @@ window.onload = function() {
 		grid_colors.push(grid_colors_row);
 	}
     document.addEventListener("keydown", (event) => {
-		snake.direction = ARROW_KEYS[event.keyCode] ?? snake.direction;
+		snake.direction = ARROW_KEYS[event.code] ?? snake.direction;
 	});
 	function render() {
 		ctx.fillStyle = "#151621";
