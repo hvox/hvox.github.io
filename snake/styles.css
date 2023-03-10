@@ -1,11 +1,4 @@
-@media (prefers-color-scheme: dark) {
-  html { background:  #151621; color: white; }
-}
-
-@media (prefers-color-scheme: light) {
-  html { background:  white; color: #333; }
-  canvas { border: 0.2rem solid #151621; }
-}
+html { background:  #151621; color: white; }
 
 body {
   display: flex;
@@ -16,12 +9,7 @@ body {
 }
 
 canvas {
-/* https://stackoverflow.com/questions/7615009/disable-interpolation-when-scaling-a-canvas
- * */
   image-rendering: pixelated;
-  width: calc(min(100vw, 100vh) - 2 * 0.2rem);
-  height: calc(min(100vw, 100vh) - 2 * 0.2rem);
-
   width: calc(min(100vw, 100vh));
   height: calc(min(100vw, 100vh));
 }
