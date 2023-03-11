@@ -6,3 +6,14 @@ html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; }
 	border: 4px solid #0f0;
 	display: block;
 }
+
+.fullscreen16x9 {
+	width: min(100dvw - 24px, 100dvh * 16 / 9 - 24px);
+	height: min(100dvh - 24px, 100dvw * 9 / 16 - 24px);
+	margin:
+		calc((100dvh - min(100dvh - 16px, 100dvw * 9 / 16 - 16px)) / 2 - 4px)
+		calc((100dvw - min(100dvw - 16px, 100dvh * 16 / 9 - 16px)) / 2 - 4px);
+	background-color: #200;
+	border: 4px solid #0ff;
+	display: block;
+}
